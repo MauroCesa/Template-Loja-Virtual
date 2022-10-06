@@ -3,14 +3,14 @@
 include "assets/src/cfg.php";
 
 //Busca as produtos no Banco de Dados
-$consultaProd = "SELECT * FROM `produtos` LIMIT 3;";
+$consultaProd = "SELECT * FROM `produtos` LIMIT 6;";
 $resultList = mysqli_query($con,$consultaProd);
 $rowList = mysqli_fetch_array($resultList);
 
 //Busca as categorias no Banco de Dados
-$consultaCat = "SELECT * FROM `categorias`;";
-$resultListCat = mysqli_query($con,$consultaCat);
-$rowList = mysqli_fetch_array($resultListCat);
+$consultaEmp = "SELECT * FROM `empresa`;";
+$resultListEmp = mysqli_query($con,$consultaEmp);
+$rowList = mysqli_fetch_array($resultListEmp);
 
 
 ?>
@@ -367,15 +367,15 @@ min-height: 100px;
     <div class="col-sm-4 col-xs-8">
       <div class="panel panel-default text-center">
         <div class="panel-heading">
-          <h1>Basic</h1>
+          <h1><?php echo $rowList['nomeProd']; ?></h1>
         </div>
         <div class="panel-body">
           <img src="uploads/<?php echo $rowList['imgProd']; ?>" alt="Denim Jeans" style="width:100%">
         </div>
         <div class="panel-footer">
-          <h3>R$ 19</h3>
+          <h3>R$ <?php echo $rowList['preco']; ?></h3>
           
-          <button class="btn btn-lg">Comprar pelo whatsapp</button>
+          <button class="btn btn-lg"><a href=" https://wa.me/5521984191298?text=Tenho%20interesse%20no%20produto%20<?php echo $rowList['nomeProd']; ?>">Comprar pelo whatsapp</a></button>
         </div>
       </div>      
     </div> 
