@@ -375,7 +375,7 @@ min-height: 100px;
         <div class="panel-footer">
           <h3>R$ <?php echo $rowList['preco']; ?></h3>
           
-          <button class="btn btn-lg"><a href=" https://wa.me/5521984191298?text=Tenho%20interesse%20no%20produto%20<?php echo $rowList['nomeProd']; ?>">Comprar pelo whatsapp</a></button>
+          <button class="btn btn-lg"><a href=" https://wa.me/55XXXXXXXXXXX?text=Tenho%20interesse%20no%20produto%20<?php echo $rowList['nomeProd']; ?>">Comprar pelo whatsapp</a></button>
         </div>
       </div>      
     </div> 
